@@ -2,7 +2,6 @@
 
 export function loadTabs() {
     document.addEventListener("DOMContentLoaded", function() {
-        // Tải nội dung tabs.html
         fetch('components/tabs.html')
             .then(response => response.text())
             .then(data => {
@@ -15,7 +14,6 @@ export function loadTabs() {
 }
 
 function loadProfileCards() {
-    // Tải nội dung của best-matches
     fetch('components/profile-card.html')
         .then(response => response.text())
         .then(profileCardData => {
@@ -23,7 +21,6 @@ function loadProfileCards() {
         })
         .catch(error => console.error('Error loading best-matches profile card:', error));
 
-    // Tải nội dung của most-recent
     fetch('components/profile-card-recent.html')
         .then(response => response.text())
         .then(profileCardData => {
@@ -31,7 +28,6 @@ function loadProfileCards() {
         })
         .catch(error => console.error('Error loading most-recent profile card:', error));
 
-    // Tải nội dung của saved-partner
     fetch('components/profile-card-saved.html')
         .then(response => response.text())
         .then(profileCardData => {
