@@ -1,0 +1,113 @@
+.filter-container {
+  border: 1px solid #DBDEE9;
+  border-radius: 8px;
+}
+
+.filter-section {
+  /* margin-bottom: 20px; */
+  padding: 0 28px 28px 28px;
+}
+
+.filter-results {
+  padding: 28px;
+  border: 1.5px solid #EAECF7;
+  margin-bottom: 20px;
+}
+
+.filter-results .filter-header {
+  margin-bottom: 0;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-bottom: 12px;
+}
+.filter-header h4 {
+  font-weight: bold;
+  font-size: 16px;
+  line-heihgt: 23.17px;
+  color: #121212;
+}
+
+.filter-header span {
+  cursor: pointer;
+}
+
+.filter-content {
+  display: none;
+  margin-top: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.filter-content.active {
+  display: block;
+}
+.filter-content input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #DBDEE9;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  margin-right: 8px;
+  outline: none;
+ 
+}
+
+/* Hiệu ứng khi checkbox được chọn */
+.filter-content input[type="checkbox"]:checked {
+  background-color: #83B414;
+  border-color: #83B414;
+}
+
+/* Tạo dấu check mark */
+.filter-content input[type="checkbox"]:checked::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Điều chỉnh khoảng cách và màu chữ cho nhãn */
+.filter-content label {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-heihgt: 20.27px;
+  color: #121212;
+  margin-bottom: 10px;
+}
+
+.filter-content {
+  border-bottom: 1px solid #EAECF7;
+  padding-bottom: 20px;
+}
+
+.results {
+  color: #989898;
+  font-weight: 400;
+  font-size: 14px;
+  line-heihgt: 20.27px;
+}
+
+.filter-content label {
+  position: relative;
+}
+
+.filter-content label span {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

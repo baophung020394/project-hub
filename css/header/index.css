@@ -1,0 +1,178 @@
+/* css/header/index.css */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+  background-color: #fff;
+  position: relative;
+}
+
+.menu-toggle {
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  padding: 10px 20px;
+  position: relative;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #989898;
+  display: flex;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23.17px;
+  align-items: center;
+}
+
+.nav-menu a span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 4px;
+}
+
+.nav-menu a span img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Sub-menu styles */
+.sub-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px 0;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-menu li:hover > .sub-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.sub-menu li {
+  padding: 10px 20px;
+}
+
+.sub-menu a {
+  font-weight: normal;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Active menu */
+.nav-menu.active {
+  display: flex;
+}
+
+.settings {
+  border-left: 1.5px solid #DBDEE9;
+  padding-left: 20px;
+}
+
+.icons {
+  margin-right: 20px;
+}
+
+.settings,
+.icons {
+  display: none;
+  gap: 16px;
+}
+
+.icons span:not(.notice) {
+  position: relative;
+}
+
+.notice {
+  background: #FF2C33;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  border-radius: 50%;
+}
+
+/* Medium screens (tablet) */
+@media (min-width: 1024px) {
+  .nav-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-menu ul {
+    display: flex;
+  }
+
+  .settings,
+  .icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Large screens (desktop) */
+@media (min-width: 1920px) {
+  .header-container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 25px;
+  }
+
+  .icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+}
