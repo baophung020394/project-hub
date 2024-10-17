@@ -2,7 +2,7 @@
 
 export function loadTabs() {
     document.addEventListener("DOMContentLoaded", function() {
-        fetch('../components/tabs.html')
+        fetch('components/tabs.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('tabs').innerHTML = data;
@@ -14,21 +14,21 @@ export function loadTabs() {
 }
 
 function loadProfileCards() {
-    fetch('../components/profile-card.html')
+    fetch('components/profile-card.html')
         .then(response => response.text())
         .then(profileCardData => {
             document.getElementById('best-matches').innerHTML = profileCardData;
         })
         .catch(error => console.error('Error loading best-matches profile card:', error));
 
-    fetch('../components/profile-card-recent.html')
+    fetch('components/profile-card-recent.html')
         .then(response => response.text())
         .then(profileCardData => {
             document.getElementById('most-recent').innerHTML = profileCardData;
         })
         .catch(error => console.error('Error loading most-recent profile card:', error));
 
-    fetch('../components/profile-card-saved.html')
+    fetch('components/profile-card-saved.html')
         .then(response => response.text())
         .then(profileCardData => {
             document.getElementById('saved-partner').innerHTML = profileCardData;

@@ -1,7 +1,7 @@
 // js/banner/index.js
 export function loadBanner() {
   document.addEventListener("DOMContentLoaded", function() {
-      fetch('../components/banner.html')
+      fetch('components/banner.html')
           .then(response => response.text())
           .then(data => {
               document.getElementById('banner').innerHTML = data;
