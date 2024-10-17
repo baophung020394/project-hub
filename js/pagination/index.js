@@ -2,7 +2,7 @@
 
 export function loadPagination() {
   document.addEventListener("DOMContentLoaded", function() {
-      fetch('components/pagination.html')
+      fetch('../components/pagination.html')
           .then(response => response.text())
           .then(data => {
               document.getElementById('pagination').innerHTML = data;

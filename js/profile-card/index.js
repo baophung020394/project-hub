@@ -2,7 +2,7 @@
 
 export function loadProfileCard() {
   document.addEventListener("DOMContentLoaded", function() {
-      fetch('components/profile-card.html')
+      fetch('../components/profile-card.html')
           .then(response => response.text())
           .then(data => {
               document.getElementById('profile-card').innerHTML = data;
